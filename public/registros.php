@@ -27,7 +27,7 @@
       <h2>Registro de serviços</h2>
     </section>
     
-    <form method="post" action="../CRUD_REGISTROS/crud.php?acao=inserir" form class="form">
+    <form method="post" action="../models/registry.php?acao=inserir" form class="form">
       <div class="form-content">
         <label for="clientname">Nome do cliente:</label>
         <input type="text" name="clientname" placeholder="Digite o nome do cliente." required>

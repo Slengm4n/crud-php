@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../STYLES/style.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
     <title>LS CUSTOMS</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
         <label class="logo">LS CUSTOMS</label>
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../CRUD_ESTOQUE/crud.php?acao=selecionar">ESTOQUE</a></li>
+            <li><a href="../models/stock.php?acao=selecionar">ESTOQUE</a></li>
         </ul>
     </nav>
     <!--FIM HEADER-->
@@ -26,7 +26,7 @@
       <h2>NOVO PRODUTO</h2>
     </section>
     
-    <form method="post" action="../CRUD_ESTOQUE/crud.php?acao=inserir" form class="form">
+    <form method="post" action="../models/stock.php?acao=inserir" form class="form">
       <div class="form-content">
         <label for="productname">Nome do produto:</label>
         <input type="text" name="productname" placeholder="Nome do produto." required>

@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf=-8">
     <meta charset ="utf-8" />
-	<link rel="stylesheet" type="text/css" href="../STYLES/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
     <title> LsCustom </title>
 
 </head>
@@ -12,8 +12,8 @@
 <nav class="Header">
         <label class="logo">LS CUSTOMS</label>
         <ul>
-            <li><a href="../PAGES/opcoes.php">OPÇÕES</a></li>
-            <li><a href="../PAGES/contato.php">CONTATO</a></li>
+            <li><a href="../public/opcoes.php">OPÇÕES</a></li>
+            <li><a href="../public/contato.php">CONTATO</a></li>
         </ul>
     </nav>
     <!--FIM HEADER-->
@@ -22,7 +22,7 @@
 
 <?php
 
-include_once "conexao.php";
+$mysqli = require __DIR__ . "/../database/db.php";
 
 $acao = $_GET['acao'];
 if (isset($_GET['id'])){
@@ -46,7 +46,7 @@ switch ($acao) {
         } else {
             echo "<script language='javascript' type='text/javascript'>
             alert('Dados cadastrados com sucesso!')
-            window.location.href='crud.php?acao=selecionar'</script> ";
+            window.location.href='user.php?acao=selecionar'</script> ";
         }
         break;
     
@@ -61,10 +61,10 @@ case 'deletar':
     } else {
         echo "<script language='javascript' type='text/javascript'>
         alert('Dados excluidos com sucesso!')
-        window.location.href='crud.php?acao=selecionar'</script>";}
+        window.location.href='user.php?acao=selecionar'</script>";}
 
         mysqli_close($conn);
-        header("Location:crud.php?acao=selecionar");
+        header("Location:user.php?acao=selecionar");
         break;
 		
 
@@ -75,7 +75,7 @@ case 'montar':
     $sql = 'SELECT * FROM tabela_clientes WHERE client_id =' . $id;
     $resultado = mysqli_query($conn, $sql) or die('Erro ao retornar dados');
 
-    echo "<form method='post' name='dados' action='crud.php?acao=atualizar' onSubmit='return enviardados();'>";
+    echo "<form method='post' name='dados' action='user.php?acao=atualizar' onSubmit='return enviardados();'>";
         echo "<table>";
         echo "<h1>Recadastramento</h1>";
 
@@ -149,11 +149,11 @@ case 'montar':
         } else {
             echo "<script language='javascript' type='text/javascript'>
             alert('Dados atualizados com sucesso!')
-            window.location.href='crud.php?acao=selecionar'</script>";
+            window.location.href='user.php?acao=selecionar'</script>";
         }
     
         mysqli_close($conn);
-        header("Location:crud.php?acao=selecionar");
+        header("Location:user.php?acao=selecionar");
         break;
 
 
@@ -161,14 +161,14 @@ case 'montar':
 case 'selecionar':
     date_default_timezone_set('America/Sao_Paulo');
     header("Content-type: text/html; charset=utf-8");
-    include_once "conexao.php";
+    $mysqli = require __DIR__ . "/../database/db.php";
 
     echo "<meta charset='utf-8'>";
     echo "<center> <table class='content-table' style='max-width: 100%; overflow-x: auto;'>";
     date_default_timezone_set('America/Sao_Paulo');
     echo "<thead>";
     echo "<div class='title'>";
-    echo "<center>Clientes caastrados na base de dados.<br></center>";
+    echo "<center>Clientes cadastrados na base de dados.<br></center>";
     echo "</div>";
     echo "<tr>";
     echo "<th> Nome do cliente: </th>";
@@ -204,9 +204,9 @@ case 'selecionar':
         echo "<td>" . $clientemail . "</td>";
         echo "           
             <td>
-                <a href='crud.php?acao=deletar&id=$id'><img src='../IMG/delete.png' alt='Deletar' title='Deletar registro'></a>
-                <a href='crud.php?acao=montar&id=$id'><img src='../IMG/update.png' alt='Atualizar' title='Atualizar registro'></a>
-                <a href='../PAGES/clientes.php'><img src='../IMG/input.png' alt='Inserir' registro'></a>
+                <a href='user.php?acao=deletar&id=$id'><img src='../assets/img/delete.png' alt='Deletar' title='Deletar registro'></a>
+                <a href='user.php?acao=montar&id=$id'><img src='../assets/img/update.png' alt='Atualizar' title='Atualizar registro'></a>
+                <a href='../public/clientes.php'><img src='../assets/img/input.png' alt='Inserir' registro'></a>
             </td>";
 
         echo "</tr>";       
