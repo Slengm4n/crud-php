@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS tabela_contato(
+    contact_id int (11) NOT NULL AUTO_INCREMENT,
+    nome VARCHAR (255) NOT NULL,
+    sobrenome VARCHAR (255) NOT NULL,
+    tell VARCHAR (255) NOT NULL,
+    email VARCHAR (255) NOT NULL,
+    mesage VARCHAR (255) NOT NULL,
+    nregistro VARCHAR (255) NOT NULL,
+    active int (11) NOT NULL DEFAULT '0',
+    PRIMARY KEY(contact_id)
+)ENGINE=INNODB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0;

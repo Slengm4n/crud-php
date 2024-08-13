@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS tabela_registros(
+    registry_id int (11) NOT NULL AUTO_INCREMENT,
+    clientname VARCHAR (255) NOT NULL,
+    veihclemodel VARCHAR (255) NOT NULL,
+    veihcleplate VARCHAR (255) NOT NULL,
+    veihclecolor VARCHAR (255) NOT NULL,
+    veihcleyear VARCHAR (255) NOT NULL,
+    indate DATE NOT NULL,
+    outdate DATE NOT NULL,
+    materiais VARCHAR (255) NOT NULL,
+    maodeobra VARCHAR (255) NOT NULL,
+    payment VARCHAR (255) NOT NULL,
+    description VARCHAR (255) NOT NULL,
+    active int (11) NOT NULL DEFAULT '0',
+    PRIMARY KEY(registry_id)
+)ENGINE=INNODB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0;

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./STYLES/style.css">
+    <title>LS CUSTOMS</title>
+</head>
+<body>
+      <!--HEADER-->
+      <nav class="Header">
+        <label class="logo">LS CUSTOMS</label>
+        <ul>
+            <li><a href="./PAGES/opcoes.php">OPÇÕES</a></li>
+            <li><a href="./PAGES/contato.php">CONTATO</a></li>
+        </ul>
+    </nav>
+    <!--FIM HEADER-->
+
+    <div class="container-index">
+        <div class="title-index">
+            <h1>LS CUSTOMS</h1>
+        </div>
+
+        <div class="text-index">
+            <p>A LS Custom é uma empresa de reparo automotivo dedicada a oferecer serviços de alta qualidade aos seus clientes. 
+                Com experiência e paixão pelo setor automotivo, nossa equipe está comprometida em manter e personalizar veículos de maneira excepcional.</p>
+        </div>
+        <div class="btn-index">
+            <a href="./PAGES/opcoes.php" class="btn-comecar">COMEÇAR</a>
+        </div>
+    </div>
+
+     <!--CONFIGURANDO O CARROSSEL DE IMAGENS-->
+     <article class="carrossel-article">
+        <div class="carrossel-title">
+            <h1>CONHEÇA NOSSO ESTABELECIMENTO</h1>
+        </div>
+        <div class="carrossel">
+            <div class="slider">
+                <div class="slides">
+                    <!--Radio Buttons-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--Fim Radio Buttons-->
+    
+                    <!--Slide Images-->
+                    <div class="slide first">
+                        <img src="./IMG/LS1.png"
+                            alt="Img1">
+                    </div>
+                    <div class="slide">
+                        <img src="./IMG/LS2.png"
+                            alt="Img2">
+                    </div>
+                    <div class="slide">
+                        <img src="./IMG/LS3.png" 
+                        alt="Img3">
+                    </div>
+                    <div class="slide">
+                        <img src="./IMG/LS4.png"
+                            alt="Img4">
+                    </div>
+                    <!--Fim Slide Images-->
+    
+                    <!--Navigation Auto-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+    
+                </div>
+    
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+    
+            </div>
+        </div>
+    </article>
+    <!--FIM CONFIGURANDO O CARROSSEL DE IMAGENS-->
+    
+
+    <div class="footer">
+        <div class="barra-promo">
+           <div class="promo-title"><h1>PROMOÇÃO!</h1></div>
+            <div class="promo-text"><p>Inscreva-se e receba nossas novidades e promoções!</p></div>
+            <input type="text" name="clientname" placeholder="" required>
+        </div>
+
+        <footer>
+            <div class="footer-img">
+            <img src="../LsCustom/IMG/LSCUSTOM.png">
+            </div>
+            <div class="footer-text">
+                <p>Copyright©2023 LSCUSTOM.LTDA</p>
+                </div>
+
+                <div class="social-media">
+                    <img src="../LsCustom/IMG/instagram.png">
+                    <img src="../LsCustom/IMG/whatsapp.png">
+                    <img src="../LsCustom/IMG/facebook.png">
+                </div>
+        </footer>
+    </div>
+    
+    <script src="./SCRIPT/carrossel.js"></script>
+</body>
+</html>
